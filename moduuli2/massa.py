@@ -8,5 +8,5 @@ luodit_yhteensä = naulat_luodeiksi + luodit
 luodit_grammoiksi = float(luodit_yhteensä) * 13.3
 kilogrammat = int(luodit_grammoiksi // 1000)
 grammat = luodit_grammoiksi % 1000
-print(f"Massa nykymittojen mukaan:\n{kilogrammat:}kg " "ja" f"{grammat: .2f}g")
+print(f"Massa nykymittojen mukaan:\n{kilogrammat:}kg " + "ja" + f"{grammat: .2f}g")
 
