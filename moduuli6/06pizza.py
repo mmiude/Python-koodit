@@ -21,6 +21,8 @@ tulos2 = unit_price(pizza2_halkaisija, pizza2_hinta)
 
 if tulos1 > tulos2:
     print(f"Pizza nro 2 on edullisempi yksikköhinnalla: {tulos2:.2f} €/m²\nPizzan nro 1 yksikköhinta: {tulos1:.2f} €/m²")
+elif tulos1 == tulos2:
+    print("Pizzojen yksikköhinnat ovat samat!")
 else:
     print(f"Pizza nro 1 on edullisempi yksikköhinnalla: {tulos1:.2f} €/m²\nPizzan nro 2 yksikköhinta: {tulos2:.2f} €/m²")
 
