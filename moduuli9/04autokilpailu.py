@@ -10,6 +10,7 @@
 # Lopuksi tulostetaan kunkin auton kaikki ominaisuudet selkeäksi taulukoksi muotoiltuna.
 
 import random
+from colorama import Fore
 class AutoLuokka:
     def __init__(self, rekisteritunnus, huippunopeus, nopeus=0, matka=0):
         self.rekisteritunnus = rekisteritunnus
@@ -28,7 +29,10 @@ class AutoLuokka:
         self.matka = self.matka + tunnit * self.nopeus
 
     def tulokset(self):
-        print(f"Rekkari: {self.rekisteritunnus:6s}  Huippunopeus: {self.huippunopeus:3d} km/h  Nopeus: {self.nopeus:3d} km/h  Matka: {self.matka} km")
+        print(f"{Fore.LIGHTMAGENTA_EX}Rekkari: {Fore.LIGHTCYAN_EX}{self.rekisteritunnus:6s} "
+              f"{Fore.LIGHTMAGENTA_EX}Huippunopeus: {Fore.LIGHTCYAN_EX}{self.huippunopeus:3d} km/h  "
+              f"{Fore.LIGHTMAGENTA_EX}Nopeus: {Fore.LIGHTCYAN_EX}{self.nopeus:3d} km/h  "
+              f"{Fore.LIGHTMAGENTA_EX}Matka: {Fore.LIGHTCYAN_EX}{self.matka} km{Fore.RESET}")
 
 
 autot = []
@@ -37,9 +41,6 @@ for i in range(10):
     nopeus = random.randint(100, 200)
     reksiteritunnus = f"ABC-{i+1}"
     autot.append(AutoLuokka(reksiteritunnus, nopeus))
-
-#for auto in autot:
-    #print(f"Rekkari: {auto.rekisteritunnus} huippunopeus: {auto.huippunopeus} km/h)
 
 while True:
     matkat = []
@@ -50,7 +51,8 @@ while True:
     if max(matkat) >= 1000:
         break
 
-
+print(34*" " +"\033[1mTULOKSET:\033[0m"+ 35*" ")
+print(80*"-")
 for auto in autot:
     auto.tulokset()
     print(80*"-")
