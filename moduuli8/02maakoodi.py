@@ -24,7 +24,7 @@ def lentokenttien_lukumäärät_tyypeittäin(iso_country):
             print(f"Vesilentokonekenttiä: {tulo[1]} kpl")
         if "closed" in tulo:
             print(f"Suljettuja kenttiä: {tulo[1]} kpl")
-    return
+
 
 yhteys = mysql.connector.connect(
     host="localhost",
