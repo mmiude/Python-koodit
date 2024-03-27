@@ -12,12 +12,12 @@ class Lift:
             floor_difference = new_floor - self.current_floor  # lasketaan kuinka monta kerrosta on liikuttava
             for i in range(floor_difference):  # kutsutaan floor_up funktiota yllä lasketun erotuksen verran
                 self.floor_up()
-            print(f"Lift has been moved to {self.current_floor} floor")
+            print(f"Lift has been moved to the {self.current_floor} floor")
         if new_floor < self.current_floor:
             floor_difference = self.current_floor - new_floor
             for i in range(floor_difference):
                 self.floor_down()
-            print(f"Lift has been moved to {self.current_floor} floor")
+            print(f"Lift has been moved to the {self.current_floor} floor")
 
     def floor_up(self):
         self.current_floor = self.current_floor + 1
@@ -36,11 +36,11 @@ class House:
             self.lifts.append(Lift(ground_floor, top_floor))
 
     def move_lift(self, lift_number, new_floor):
-        print(f"Moving lift number {lift_number} to the {new_floor} floor:")
+        print(f"\nMoving lift number {lift_number} to the {new_floor} floor:")
         self.lifts[lift_number-1].move_to(new_floor)
 
     def fire_alarm(self):
-        print(f"Fire alarm. Lifts have been moved to the ground floor. Double check that all {len(self.lifts)} "
+        print(f"\nFire alarm. Lifts have been moved to the ground floor. Double check that all {len(self.lifts)} "
               f"lifts are on the ground floor:")
         for i in range(len(self.lifts)):
             self.lifts[i].move_to(0)

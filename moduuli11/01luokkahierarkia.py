@@ -17,7 +17,7 @@ class Kirja(Julkaisu):
         self.sivumäärä = sivumäärä
 
     def tulosta_tiedot(self):
-        print(f"{Fore.LIGHTMAGENTA_EX}Kirjajulkaisut:{Fore.RESET}\nNimi: {self.nimi}\nKirjoittaja: {self.kirjoittaja}\nSivumäärä: {self.sivumäärä}")
+        print(f"\n{Fore.LIGHTMAGENTA_EX}Kirjajulkaisut:{Fore.RESET}\nNimi: {self.nimi}\nKirjoittaja: {self.kirjoittaja}\nSivumäärä: {self.sivumäärä}")
 
 
 class Lehti(Julkaisu):
@@ -26,7 +26,7 @@ class Lehti(Julkaisu):
         self.päätoimittaja = päätoimittaja
 
     def tulosta_tiedot(self):
-        print(f"{Fore.LIGHTMAGENTA_EX}Lehtijulkaisut:{Fore.RESET}\nNimi: {self.nimi}\nPäätoimittaja: {self.päätoimittaja}")
+        print(f"\n{Fore.LIGHTMAGENTA_EX}Lehtijulkaisut:{Fore.RESET}\nNimi: {self.nimi}\nPäätoimittaja: {self.päätoimittaja}")
 
 
 julkaisut = []
